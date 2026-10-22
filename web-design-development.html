@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Web Design & Development Services | G7 Digital Marketing</title>
+
+  <meta name="description" content="G7 Digital Marketing offers responsive website design and development services to help businesses build a professional online presence and grow online.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://g7digitalmarketing.in/web-design-development.html">
+
+  <meta property="og:title" content="Web Design & Development | G7 Digital Marketing">
+  <meta property="og:description" content="Build a professional, responsive website for your business with G7 Digital Marketing.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      line-height: 1.7;
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .navbar {
+      padding: 18px 0;
+      border-bottom: 1px solid #e9edf5;
+      background: #ffffff;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      color: #1749db;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: #273449;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 90px 0;
+      background: linear-gradient(135deg, #eff4ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 13px;
+      border-radius: 30px;
+      background: #dce7ff;
+      color: #1749db;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 57px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 17px;
+      color: #536075;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 7px;
+      background: #1749db;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.25;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p,
+    .intro-text {
+      color: #647086;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 27px;
+      border: 1px solid #e5eaf3;
+      border-radius: 13px;
+      background: #ffffff;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #647086;
+    }
+
+    .intro {
+      background: #f6f8fc;
+    }
+
+    .intro-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .intro-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .intro-content p {
+      margin-bottom: 16px;
+      color: #536075;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      padding: 22px;
+      background: #f6f8fc;
+      border-radius: 10px;
+    }
+
+    .step-number {
+      font-size: 25px;
+      color: #1749db;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: #647086;
+    }
+
+    .cta {
+      padding: 65px 20px;
+      text-align: center;
+      background: #10295f;
+      color: #ffffff;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 15px auto 25px;
+      color: #dce5fa;
+    }
+
+    .cta .btn {
+      background: #ffffff;
+      color: #1749db;
+    }
+
+    footer {
+      padding: 24px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #647086;
+      border-top: 1px solid #e9edf5;
+    }
+
+    @media (max-width: 800px) {
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-inner {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px 18px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 60px 0;
+      }
+
+      .cards,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">G7 Digital Marketing</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#process">Our Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Website Solutions for Your Business</span>
+
+        <h1>Web Design &amp; Development Services</h1>
+
+        <p>
+          Build a professional online presence with modern website design
+          and development. We focus on responsive layouts, user-friendly
+          experiences and websites designed around your business goals.
+        </p>
+
+        <a class="btn" href="#contact">Discuss Your Website</a>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Website Design &amp; Development Services</h2>
+          <p>
+            Website solutions designed to help businesses present their
+            services, connect with customers and grow online.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Business Website Design</h3>
+            <p>
+              Create a professional website that communicates your brand,
+              services and business information clearly.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Responsive Web Design</h3>
+            <p>
+              Design website layouts that adapt to mobile phones,
+              tablets and desktop screens.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>E-commerce Websites</h3>
+            <p>
+              Build online store experiences that help customers explore
+              products and navigate the buying process.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Landing Page Design</h3>
+            <p>
+              Create focused landing pages for marketing campaigns,
+              lead generation and specific business offers.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Website Maintenance</h3>
+            <p>
+              Keep website content, layouts and supported features
+              updated as your business needs change.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>SEO-Friendly Development</h3>
+            <p>
+              Use clear page structure, descriptive headings,
+              relevant metadata and crawlable links to support SEO.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro" id="benefits">
+      <div class="container intro-content">
+        <h2>Why Does Your Business Need a Professional Website?</h2>
+
+        <p>
+          A well-designed website gives potential customers a place to
+          understand your business, explore your services and contact you.
+          It also helps establish a consistent online brand presence.
+        </p>
+
+        <p>
+          At G7 Digital Marketing, our approach combines website usability,
+          responsive design and a clear content structure. We aim to make
+          important information easy to find and help visitors take the
+          next step.
+        </p>
+
+        <p>
+          Website design alone does not guarantee search rankings or sales.
+          Performance also depends on content quality, technical SEO,
+          competition and the overall customer experience.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Website Development Process</h2>
+          <p>
+            A clear process helps turn your website requirements
+            into a structured online experience.
+          </p>
+        </div>
+
+        <div class="process">
+          <article class="step">
+            <div class="step-number">01</div>
+            <h3>Planning</h3>
+            <p>Understand your goals, audience, content and website requirements.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02</div>
+            <h3>Design</h3>
+            <p>Plan the layout, visual hierarchy and user experience.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03</div>
+            <h3>Development</h3>
+            <p>Build the website with responsive layouts and organized code.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">04</div>
+            <h3>Testing</h3>
+            <p>Check links, mobile display, page content and technical basics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <h2>Ready to Build Your Business Website?</h2>
+
+        <p>
+          Let's discuss a website that fits your business goals
+          and gives your customers a better online experience.
+        </p>
+
+        <a class="btn" href="index.html#contact">Contact G7 Digital Marketing</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 G7 Digital Marketing. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

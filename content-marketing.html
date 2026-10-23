@@ -5,195 +5,428 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Content Marketing Services | G7 Digital Marketing</title>
-
-  <meta name="description" content="Grow your brand with content marketing services from G7 Digital Marketing. We create SEO-friendly website content, blogs, and engaging social media content.">
-
+  <meta name="description" content="Grow your brand with content marketing services from G7 Digital Marketing. Get SEO content, blog writing, website copy, social media content and a strategic content plan.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gouravkapoor4472-boop.github.io/g7digitalmarketing/content-marketing.html">
 
-  <link rel="canonical" href="https://g7digitalmarketing.in/content-marketing.html">
+  <meta property="og:title" content="Content Marketing Services | G7 Digital Marketing">
+  <meta property="og:description" content="Build brand awareness, attract the right audience and grow your business with strategic content marketing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gouravkapoor4472-boop.github.io/g7digitalmarketing/content-marketing.html">
+  <meta property="og:image" content="https://gouravkapoor4472-boop.github.io/g7digitalmarketing/logo.png">
+
+  <link rel="icon" href="./logo.png" type="image/png">
 
   <style>
+    :root {
+      --primary: #16a34a;
+      --primary-dark: #15803d;
+      --dark: #111827;
+      --text: #4b5563;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --border: #e5e7eb;
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
       line-height: 1.7;
-      background: #fff;
-    }
-   <header>
-  <a href="index.html" class="logo">
-    <img src="./logo.png" alt="G7 Digital Marketing"
-         style="height:56px; width:auto; display:block;">
-  </a>
-
-  <nav class="nav-links">
-    <a href="index.html#home">Home</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#faq">FAQ</a>
-  </nav>
-</header>
-  </a>
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 18px 8%;
+      background: var(--white);
     }
 
-    header a {
-      color: white;
+    a {
+      color: inherit;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 22px;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 10px 17px;
+      border-radius: 7px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--primary-dark);
+      color: #ffffff;
     }
 
     .hero {
-      padding: 85px 8%;
-      text-align: center;
-      background: #f1f5ff;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #ffffff;
+      padding: 95px 0;
+      overflow: hidden;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #111827;
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #86efac;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.15;
+      margin-bottom: 22px;
     }
 
     .hero p {
-      max-width: 750px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-      color: #4b5563;
+      color: #d1d5db;
+      font-size: 17px;
+      max-width: 680px;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 13px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.2s;
     }
 
-    section {
-      padding: 60px 8%;
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      color: #ffffff;
+      border: 1px solid #9ca3af;
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      margin-left: 10px;
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading span {
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
     }
 
     h2 {
-      font-size: 30px;
-      margin-bottom: 18px;
-      color: #111827;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.25;
+      margin: 10px 0 15px;
     }
 
-    .intro {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
+    .section-heading p,
+    .intro-text {
+      color: var(--text);
     }
 
-    .intro p,
-    .content-section p {
-      color: #555;
-      margin-bottom: 16px;
-    }
-
-    .services {
-      background: #f9fafb;
-    }
-
-    .service-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
-      margin-top: 30px;
     }
 
-    .service-card {
-      background: white;
-      padding: 25px;
-      border: 1px solid #e5e7eb;
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 27px;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #dcfce7;
+      color: var(--primary-dark);
       border-radius: 10px;
+      font-size: 23px;
+      margin-bottom: 17px;
     }
 
-    .service-card h3 {
-      margin-bottom: 12px;
-      color: #1d4ed8;
-    }
-
-    .service-card p {
-      color: #555;
-    }
-
-    .benefits-list,
-    .process-list {
-      padding-left: 22px;
-      margin-top: 18px;
-    }
-
-    .benefits-list li,
-    .process-list li {
-      margin-bottom: 12px;
-    }
-
-    .faq-item {
-      margin: 20px 0;
-      padding-bottom: 18px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .faq-item h3 {
-      margin-bottom: 8px;
+    .card h3 {
       font-size: 19px;
+      margin-bottom: 10px;
     }
 
-    .faq-item p {
-      color: #555;
+    .card p {
+      color: var(--text);
+      font-size: 15px;
     }
 
-    .cta {
-      text-align: center;
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .intro-grid h2 {
+      margin-top: 8px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 22px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding: 8px 0 8px 30px;
+      color: var(--text);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .content-panel {
+      padding: 32px;
+      background: #ecfdf5;
+      border: 1px solid #bbf7d0;
+      border-radius: 14px;
+    }
+
+    .content-panel h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .content-panel p {
+      color: var(--text);
+    }
+
+    .process-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 18px 21px;
+      margin-bottom: 13px;
+      background: #ffffff;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    details p {
+      color: var(--text);
+      padding-top: 12px;
+    }
+
+    .contact-section {
+      padding: 75px 0;
       background: #111827;
-      color: white;
-    }
-
-    .cta h2 {
-      color: white;
-    }
-
-    .cta p {
-      margin-bottom: 25px;
-      color: #e5e7eb;
-    }
-
-    footer {
-      background: #f3f4f6;
+      color: #ffffff;
       text-align: center;
-      padding: 20px;
-      color: #555;
+    }
+
+    .contact-section p {
+      max-width: 650px;
+      color: #d1d5db;
+      margin: 0 auto 26px;
+    }
+
+    .contact-section h2 {
+      max-width: 750px;
+      margin: 0 auto 18px;
+    }
+
+    .footer {
+      background: #0b1120;
+      color: #9ca3af;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #d1d5db;
+    }
+
+    @media (max-width: 850px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .nav-inner {
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 12px 16px;
+      }
     }
 
     @media (max-width: 600px) {
+      .nav-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 0;
+      }
+
+      .logo img {
+        height: 48px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 10px 15px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .nav-links .nav-cta {
+        padding: 7px 11px;
+      }
+
       .hero {
-        padding: 60px 6%;
+        padding: 65px 0;
       }
 
-      .hero h1 {
-        font-size: 32px;
+      .hero p {
+        font-size: 16px;
       }
 
-      section {
-        padding: 45px 6%;
+      .btn-outline {
+        margin: 12px 0 0;
       }
 
-      h2 {
-        font-size: 26px;
+      .section {
+        padding: 55px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .content-panel {
+        padding: 24px;
       }
     }
   </style>
@@ -201,177 +434,326 @@
 
 <body>
 
-  <header>
-    <a href="index.html">G7 Digital Marketing</a>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html#home" aria-label="G7 Digital Marketing Home">
+        <img src="./logo.png" alt="G7 Digital Marketing">
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-
     <section class="hero">
-      <h1>Content Marketing Services</h1>
-      <p>
-        Build brand awareness, connect with your audience, and support
-        business growth with useful, engaging, and SEO-friendly content
-        from G7 Digital Marketing.
-      </p>
-      <a href="index.html#contact" class="btn">Get in Touch</a>
-    </section>
-
-    <section class="intro">
-      <h2>Content That Connects With Your Audience</h2>
-      <p>
-        Content marketing helps businesses share valuable information,
-        answer customer questions, and build trust with their target audience.
-      </p>
-      <p>
-        At G7 Digital Marketing, we help businesses plan and create relevant
-        content for their websites, blogs, and social media platforms.
-        Our focus is on clear communication, audience engagement, and
-        supporting your wider digital marketing goals.
-      </p>
-    </section>
-
-    <section class="services">
-      <h2>Our Content Marketing Services</h2>
-      <p>
-        We develop content according to your business goals, audience,
-        and online marketing strategy.
-      </p>
-
-      <div class="service-grid">
-
-        <div class="service-card">
-          <h3>Content Strategy</h3>
-          <p>
-            We help plan content topics, formats, and publishing schedules
-            based on your audience and marketing objectives.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Website Content Writing</h3>
-          <p>
-            We create clear website copy that explains your services,
-            communicates your value, and guides visitors toward action.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Blog Writing</h3>
-          <p>
-            We develop informative blog articles that answer relevant
-            questions and help your audience learn about your industry.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>SEO-Friendly Content</h3>
-          <p>
-            We structure content around relevant search topics, useful
-            information, and natural keyword usage to support SEO.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Social Media Content</h3>
-          <p>
-            We help create captions, post ideas, and content themes
-            designed to encourage audience interaction.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Content Updates</h3>
-          <p>
-            We review existing content and suggest improvements to its
-            clarity, usefulness, accuracy, and search relevance.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Benefits of Content Marketing</h2>
-      <p>
-        Consistent, audience-focused content can support your business
-        across different stages of the customer journey.
-      </p>
-
-      <ul class="benefits-list">
-        <li>Help build brand awareness and recognition.</li>
-        <li>Provide useful answers to potential customers.</li>
-        <li>Support your website's search engine optimisation efforts.</li>
-        <li>Build trust by sharing relevant and informative content.</li>
-        <li>Give your social media channels valuable topics to share.</li>
-        <li>Help guide interested visitors toward your products or services.</li>
-      </ul>
-    </section>
-
-    <section class="services">
-      <h2>Our Content Marketing Process</h2>
-
-      <ol class="process-list">
-        <li><strong>Understand Your Business:</strong> Learn about your services, goals, and target audience.</li>
-        <li><strong>Research Topics:</strong> Identify useful content topics and relevant search queries.</li>
-        <li><strong>Plan the Content:</strong> Create a practical content plan based on your objectives.</li>
-        <li><strong>Create and Review:</strong> Develop content and review it for quality, clarity, and relevance.</li>
-        <li><strong>Measure and Improve:</strong> Review available performance data and identify opportunities to improve.</li>
-      </ol>
-    </section>
-
-    <section class="content-section">
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <h3>What is content marketing?</h3>
+      <div class="container hero-content">
+        <span class="eyebrow">Strategic Content Marketing</span>
+        <h1>Content Marketing Services That Build Your Brand</h1>
         <p>
-          Content marketing involves creating and sharing useful, relevant
-          content to attract an audience, build trust, and support business goals.
+          Create valuable content that attracts the right audience, builds trust
+          and helps your business grow. G7 Digital Marketing helps brands
+          communicate clearly through strategic, audience-focused content.
         </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Does content marketing help SEO?</h3>
-        <p>
-          Yes. Helpful, well-structured content can support SEO by addressing
-          user search intent and providing useful information. Rankings are
-          not guaranteed.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What types of content can you create?</h3>
-        <p>
-          Content may include website pages, blog articles, social media
-          captions, and other written materials depending on your requirements.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How long does content marketing take to show results?</h3>
-        <p>
-          Results depend on your goals, competition, publishing consistency,
-          distribution, and other marketing factors. SEO-related improvements
-          may take time to become noticeable.
-        </p>
+        <a class="btn" href="#contact">Get Started</a>
+        <a class="btn-outline" href="#services">Explore Services</a>
       </div>
     </section>
 
-    <section class="cta">
-      <h2>Ready to Improve Your Content Strategy?</h2>
-      <p>
-        Let's discuss how relevant content can support your business
-        and digital marketing goals.
-      </p>
-      <a href="index.html#contact" class="btn">Contact Us</a>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span>Our Services</span>
+          <h2>Content Marketing Solutions for Your Business</h2>
+          <p>
+            From website copy to blog articles, we create content designed
+            around your audience, business goals and brand voice.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-icon">✍️</div>
+            <h3>Blog Writing</h3>
+            <p>
+              Informative and engaging blog posts that answer audience
+              questions, build credibility and support your SEO strategy.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🔎</div>
+            <h3>SEO Content Writing</h3>
+            <p>
+              Search-focused content developed around relevant keywords,
+              search intent, readability and useful information.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Website Content</h3>
+            <p>
+              Clear homepage, service-page and about-page copy that explains
+              your value and guides visitors towards taking action.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📱</div>
+            <h3>Social Media Content</h3>
+            <p>
+              Content ideas, captions and post copy that help maintain a
+              consistent brand voice across your social media platforms.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛍️</div>
+            <h3>Product Descriptions</h3>
+            <p>
+              Helpful and persuasive product descriptions that explain key
+              features, benefits and reasons to choose your products.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🗓️</div>
+            <h3>Content Strategy</h3>
+            <p>
+              A structured content plan based on your goals, target audience,
+              topics, publishing schedule and performance metrics.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
+    <section class="section section-light" id="benefits">
+      <div class="container intro-grid">
+        <div>
+          <span class="eyebrow" style="color:#15803d;">Why Content Marketing?</span>
+          <h2>Give Your Audience a Reason to Trust Your Brand</h2>
+          <p class="intro-text">
+            Useful content helps people understand your business before they
+            make a decision. A consistent strategy can support organic
+            visibility, brand recognition and customer engagement over time.
+          </p>
+
+          <ul class="check-list">
+            <li>Build brand awareness and credibility.</li>
+            <li>Support SEO and organic website traffic.</li>
+            <li>Answer customer questions with useful information.</li>
+            <li>Keep your messaging consistent across channels.</li>
+            <li>Help guide potential customers through their buying journey.</li>
+          </ul>
+        </div>
+
+        <div class="content-panel">
+          <h3>Content With a Clear Purpose</h3>
+          <p>
+            Good content is more than publishing regularly. It should match
+            what your audience needs, reflect your brand and have a clear
+            purpose at every stage of the customer journey.
+          </p>
+          <ul class="check-list">
+            <li>Audience and competitor research</li>
+            <li>Topic and keyword planning</li>
+            <li>Content creation and optimisation</li>
+            <li>Performance review and improvements</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <span>Our Process</span>
+          <h2>How Our Content Marketing Process Works</h2>
+          <p>
+            A practical step-by-step approach to create relevant content
+            and keep your marketing focused on business goals.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="process-number">01</div>
+            <h3>Research & Planning</h3>
+            <p>
+              Understand your business, audience, competitors and content
+              opportunities before deciding what to publish.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="process-number">02</div>
+            <h3>Content Creation</h3>
+            <p>
+              Develop helpful, original content aligned with your brand voice,
+              chosen topics and audience needs.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="process-number">03</div>
+            <h3>Optimisation & Publishing</h3>
+            <p>
+              Refine content for readability, search intent and relevant
+              channels, then prepare it for publication.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="process-number">04</div>
+            <h3>Measure & Improve</h3>
+            <p>
+              Review available performance data and use insights to improve
+              future content and the overall strategy.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <span>Who We Help</span>
+          <h2>Content for Different Business Needs</h2>
+          <p>
+            Our content marketing approach can be adapted to different
+            industries, audiences and business objectives.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Small Businesses</h3>
+            <p>
+              Explain your services clearly and build a recognisable online
+              presence with consistent, useful content.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>E-commerce Brands</h3>
+            <p>
+              Improve product pages, category copy and buying guides to help
+              customers make informed purchase decisions.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Service Providers</h3>
+            <p>
+              Use educational articles and service-page content to answer
+              common questions and communicate your expertise.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span>FAQs</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Learn more about content marketing and how it can support your business.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>What is content marketing?</summary>
+            <p>
+              Content marketing is the process of planning and sharing
+              relevant, valuable content to attract and engage a target
+              audience and support business goals.
+            </p>
+          </details>
+
+          <details>
+            <summary>What types of content do you create?</summary>
+            <p>
+              Depending on your requirements, content may include blog posts,
+              SEO website copy, service pages, product descriptions, social
+              media captions and content plans.
+            </p>
+          </details>
+
+          <details>
+            <summary>How does content marketing help SEO?</summary>
+            <p>
+              Useful content can help search engines understand your pages
+              and help visitors find answers to their questions. Results also
+              depend on technical SEO, competition, website quality and other factors.
+            </p>
+          </details>
+
+          <details>
+            <summary>How long does content marketing take to show results?</summary>
+            <p>
+              Timing varies by industry, competition, content quality,
+              publishing consistency and promotion. Content marketing is
+              generally a long-term strategy, not a guaranteed quick fix.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can content marketing work with social media and SEO?</summary>
+            <p>
+              Yes. A coordinated strategy can use website content, SEO and
+              social media to deliver consistent messages across different
+              channels.
+            </p>
+          </details>
+
+          <details>
+            <summary>How can I get started with G7 Digital Marketing?</summary>
+            <p>
+              Contact us to discuss your business, target audience, content
+              requirements and marketing goals.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <span class="eyebrow">Let's Work Together</span>
+        <h2>Ready to Grow Your Brand With Better Content?</h2>
+        <p>
+          Let's discuss your content marketing goals and build a strategy
+          that fits your business and audience.
+        </p>
+        <a class="btn" href="index.html#contact">Contact Us</a>
+        <a class="btn-outline" href="https://wa.me/message/YISI4KQVCBLKN1"
+           target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 G7 Digital Marketing. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="year">2026</span> G7 Digital Marketing. All rights reserved.
+        | <a href="index.html">Home</a>
+      </p>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>

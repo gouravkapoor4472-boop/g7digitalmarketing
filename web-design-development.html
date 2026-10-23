@@ -4,19 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Web Design & Development Services | G7 Digital Marketing</title>
+  <title>Web Design &amp; Development Services | G7 Digital Marketing</title>
 
-  <meta name="description" content="G7 Digital Marketing offers responsive website design and development services to help businesses build a professional online presence and grow online.">
+  <meta name="description" content="G7 Digital Marketing offers responsive website design, business website development, landing pages, e-commerce websites and SEO-friendly web development.">
 
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://g7digitalmarketing.in/web-design-development.html">
+  <link rel="canonical" href="https://gouravkapoor4472-boop.github.io/g7digitalmarketing/web-design-development.html">
 
-  <meta property="og:title" content="Web Design & Development | G7 Digital Marketing">
-  <meta property="og:description" content="Build a professional, responsive website for your business with G7 Digital Marketing.">
+  <meta property="og:title" content="Web Design &amp; Development | G7 Digital Marketing">
+  <meta property="og:description" content="Create a professional, responsive and user-friendly website with G7 Digital Marketing.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gouravkapoor4472-boop.github.io/g7digitalmarketing/web-design-development.html">
+
+  <link rel="icon" href="./logo.png" type="image/png">
 
   <style>
+    :root {
+      --dark: #101828;
+      --dark-light: #18253b;
+      --green: #19c37d;
+      --green-light: #e9fbf2;
+      --text: #344054;
+      --muted: #667085;
+      --white: #ffffff;
+      --border: #e7ebf0;
+      --light: #f7f9fc;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -25,13 +40,14 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 95px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #172033;
+      color: var(--text);
       line-height: 1.7;
-      background: #ffffff;
+      background: var(--white);
     }
 
     a {
@@ -40,98 +56,219 @@
 
     .container {
       width: min(1120px, 90%);
-      margin: auto;
+      margin: 0 auto;
     }
 
+    /* Navigation */
     .navbar {
-      padding: 18px 0;
-      border-bottom: 1px solid #e9edf5;
-      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
+      min-height: 82px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 56px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 23px;
       flex-wrap: wrap;
-      gap: 22px;
     }
 
     .nav-links a {
-      color: #273449;
+      color: var(--dark);
       font-size: 14px;
       font-weight: 600;
     }
 
-    .hero {
-      padding: 90px 0;
-      background: linear-gradient(135deg, #eff4ff, #ffffff);
+    .nav-links a:hover {
+      color: #07945b;
     }
 
-    .hero-content {
-      max-width: 790px;
+    .nav-links .nav-cta {
+      padding: 10px 17px;
+      background: var(--green);
+      color: var(--dark);
+      border-radius: 8px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 95px 0;
+      color: var(--white);
+      background:
+        radial-gradient(ellipse at 85% 15%, #25463f 0%, transparent 36%),
+        linear-gradient(135deg, #101828, #172b3b);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 55px;
     }
 
     .eyebrow {
       display: inline-block;
-      padding: 6px 13px;
+      padding: 7px 13px;
+      margin-bottom: 22px;
+      color: #a8f0cd;
+      background: rgba(25, 195, 125, 0.12);
+      border: 1px solid rgba(25, 195, 125, 0.3);
       border-radius: 30px;
-      background: #dce7ff;
-      color: #1749db;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 20px;
     }
 
     h1 {
+      margin-bottom: 23px;
       font-size: clamp(36px, 5vw, 57px);
-      line-height: 1.15;
+      line-height: 1.12;
       letter-spacing: -1.5px;
-      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
     }
 
     .hero p {
-      max-width: 680px;
-      font-size: 17px;
-      color: #536075;
+      max-width: 620px;
       margin-bottom: 30px;
+      color: #d0d8e3;
+      font-size: 17px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 7px;
-      background: #1749db;
-      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 21px;
+      border-radius: 8px;
       font-weight: 700;
+      transition: transform 0.2s;
     }
 
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #10251b;
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      border: 1px solid #637184;
+    }
+
+    .hero-card {
+      padding: 32px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 18px;
+      color: var(--white);
+      font-size: 23px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      padding: 12px 0;
+      color: #e4eaf0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .check-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .check {
+      margin-right: 10px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    /* Common sections */
     .section {
-      padding: 75px 0;
+      padding: 85px 0;
+    }
+
+    .section-light {
+      background: var(--light);
     }
 
     .section-heading {
-      max-width: 700px;
-      margin: 0 auto 38px;
+      max-width: 720px;
+      margin: 0 auto 42px;
       text-align: center;
     }
 
+    .section-label {
+      color: #07945b;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
     h2 {
-      font-size: clamp(27px, 4vw, 37px);
+      margin: 12px 0 16px;
+      color: var(--dark);
+      font-size: clamp(28px, 3.5vw, 39px);
       line-height: 1.25;
+      letter-spacing: -0.7px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro p {
       margin-bottom: 15px;
+      color: var(--muted);
     }
 
-    .section-heading p,
-    .intro-text {
-      color: #647086;
-    }
-
+    /* Services */
     .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -139,126 +276,227 @@
     }
 
     .card {
-      padding: 27px;
-      border: 1px solid #e5eaf3;
-      border-radius: 13px;
-      background: #ffffff;
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(16, 24, 40, 0.07);
+    }
+
+    .icon-box {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      color: #087848;
+      background: var(--green-light);
+      border-radius: 12px;
+      font-size: 19px;
+      font-weight: 800;
     }
 
     .card h3 {
+      margin-bottom: 10px;
+      color: var(--dark);
       font-size: 19px;
-      margin-bottom: 12px;
     }
 
     .card p {
+      color: var(--muted);
       font-size: 15px;
-      color: #647086;
     }
 
-    .intro {
-      background: #f6f8fc;
+    /* Benefits */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
     }
 
-    .intro-content {
-      max-width: 800px;
-      margin: auto;
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
     }
 
-    .intro-content h2 {
-      margin-bottom: 20px;
+    .benefit .icon-box {
+      flex-shrink: 0;
+      margin: 0;
     }
 
-    .intro-content p {
-      margin-bottom: 16px;
-      color: #536075;
+    .benefit h3 {
+      margin-bottom: 6px;
+      color: var(--dark);
+      font-size: 18px;
     }
 
-    .process {
+    .benefit p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Process */
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
     }
 
-    .step {
-      padding: 22px;
-      background: #f6f8fc;
-      border-radius: 10px;
+    .process-card {
+      padding: 25px 20px;
+      background: var(--light);
+      border-top: 3px solid var(--green);
+      border-radius: 0 0 12px 12px;
     }
 
-    .step-number {
-      font-size: 25px;
-      color: #1749db;
+    .process-number {
+      color: #07945b;
+      font-size: 14px;
       font-weight: 800;
-      margin-bottom: 10px;
     }
 
-    .step h3 {
-      margin-bottom: 8px;
-      font-size: 17px;
+    .process-card h3 {
+      margin: 12px 0 9px;
+      color: var(--dark);
+      font-size: 18px;
     }
 
-    .step p {
+    .process-card p {
+      color: var(--muted);
       font-size: 14px;
-      color: #647086;
     }
 
-    .cta {
-      padding: 65px 20px;
+    /* FAQ */
+    .faq-list {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item h3 {
+      margin-bottom: 9px;
+      color: var(--dark);
+      font-size: 18px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-section {
+      padding: 75px 0;
+      background: var(--dark);
+      color: var(--white);
       text-align: center;
-      background: #10295f;
-      color: #ffffff;
     }
 
-    .cta p {
-      max-width: 600px;
-      margin: 15px auto 25px;
-      color: #dce5fa;
+    .contact-section h2 {
+      color: var(--white);
     }
 
-    .cta .btn {
-      background: #ffffff;
-      color: #1749db;
+    .contact-section p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #d0d8e3;
     }
 
-    footer {
+    .contact-buttons {
+      justify-content: center;
+    }
+
+    /* Footer */
+    .footer {
       padding: 24px 0;
+      background: #0b1220;
+      color: #c4ccd7;
       text-align: center;
       font-size: 14px;
-      color: #647086;
-      border-top: 1px solid #e9edf5;
     }
 
-    @media (max-width: 800px) {
+    .footer a {
+      color: #a8f0cd;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
       .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .process {
+      .process-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .nav-links {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
       .nav-inner {
         flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 0;
+      }
+
+      .logo img {
+        height: 48px;
       }
 
       .nav-links {
         justify-content: center;
         gap: 12px 18px;
       }
-    }
 
-    @media (max-width: 520px) {
+      .nav-links a {
+        font-size: 13px;
+      }
+
       .hero {
         padding: 60px 0;
       }
 
-      .cards,
-      .process {
-        grid-template-columns: 1fr;
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-card {
+        padding: 24px;
       }
 
       .section {
-        padding: 55px 0;
+        padding: 60px 0;
+      }
+
+      .cards,
+      .benefit-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 24px;
       }
     }
   </style>
@@ -266,184 +504,388 @@
 
 <body>
 
+  <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a class="logo" href="index.html">
-  <img src="./logo.png" alt="G7 Digital Marketing"
-       style="height:56px; width:auto; display:block;">
-</a>
+
+      <a class="logo" href="index.html#home" aria-label="G7 Digital Marketing Home">
+        <img src="./logo.png" alt="G7 Digital Marketing">
+      </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+        <a href="index.html#home">Home</a>
         <a href="index.html#services">Services</a>
         <a href="#benefits">Benefits</a>
-        <a href="#process">Our Process</a>
-        <a href="#contact">Contact</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
 
-    <section class="hero">
-      <div class="container hero-content">
-        <span class="eyebrow">Website Solutions for Your Business</span>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-        <h1>Web Design &amp; Development Services</h1>
+        <div>
+          <span class="eyebrow">Creative Design &amp; Development</span>
 
-        <p>
-          Build a professional online presence with modern website design
-          and development. We focus on responsive layouts, user-friendly
-          experiences and websites designed around your business goals.
-        </p>
+          <h1>Build a Website That Makes Your Business <span>Stand Out</span></h1>
 
-        <a class="btn" href="#contact">Discuss Your Website</a>
+          <p>
+            Create a professional online presence with modern website
+            design and development. We focus on responsive layouts,
+            clear navigation, useful content and user-friendly experiences
+            designed around your business goals.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="#contact">Discuss Your Website</a>
+            <a class="btn btn-secondary" href="#services">Explore Our Services</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Web Solutions for Your Business</h2>
+          <ul class="check-list">
+            <li><span class="check">✓</span> Modern, professional design</li>
+            <li><span class="check">✓</span> Mobile-friendly layouts</li>
+            <li><span class="check">✓</span> Clear navigation and structure</li>
+            <li><span class="check">✓</span> SEO-friendly page foundations</li>
+            <li><span class="check">✓</span> User-focused website experience</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
-    <section class="section" id="services">
+    <!-- Introduction -->
+    <section class="section">
+      <div class="container intro">
+        <span class="section-label">Your Digital Foundation</span>
+        <h2>Web Design That Works for Your Business</h2>
+
+        <p>
+          Your website often gives potential customers their first
+          impression of your business. A clear layout, consistent
+          branding and useful information help visitors understand
+          what you offer and how to contact you.
+        </p>
+
+        <p>
+          G7 Digital Marketing focuses on building accessible,
+          responsive and easy-to-navigate websites. Each project
+          should support your business objectives and provide a
+          useful experience across desktop, tablet and mobile devices.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-light" id="services">
       <div class="container">
+
         <div class="section-heading">
-          <h2>Our Website Design &amp; Development Services</h2>
+          <span class="section-label">What We Build</span>
+          <h2>Our Web Design &amp; Development Services</h2>
           <p>
-            Website solutions designed to help businesses present their
-            services, connect with customers and grow online.
+            Website solutions for businesses that want a clear,
+            professional and effective online presence.
           </p>
         </div>
 
         <div class="cards">
+
           <article class="card">
+            <div class="icon-box">01</div>
             <h3>Business Website Design</h3>
             <p>
-              Create a professional website that communicates your brand,
-              services and business information clearly.
+              Present your business, services, brand identity and
+              contact information through a professional website.
             </p>
           </article>
 
           <article class="card">
+            <div class="icon-box">02</div>
             <h3>Responsive Web Design</h3>
             <p>
-              Design website layouts that adapt to mobile phones,
-              tablets and desktop screens.
+              Create layouts that adapt to different screen sizes
+              for a consistent experience on phones, tablets and desktops.
             </p>
           </article>
 
           <article class="card">
+            <div class="icon-box">03</div>
             <h3>E-commerce Websites</h3>
             <p>
-              Build online store experiences that help customers explore
-              products and navigate the buying process.
+              Organize online product listings and shopping journeys
+              to help customers explore products and make purchases.
             </p>
           </article>
 
           <article class="card">
+            <div class="icon-box">04</div>
             <h3>Landing Page Design</h3>
             <p>
-              Create focused landing pages for marketing campaigns,
-              lead generation and specific business offers.
+              Build focused landing pages for specific services,
+              marketing campaigns, enquiries and business offers.
             </p>
           </article>
 
           <article class="card">
-            <h3>Website Maintenance</h3>
+            <div class="icon-box">05</div>
+            <h3>Website Redesign</h3>
             <p>
-              Keep website content, layouts and supported features
-              updated as your business needs change.
+              Refresh an existing website's layout, visual consistency,
+              content structure and navigation where needed.
             </p>
           </article>
 
           <article class="card">
+            <div class="icon-box">06</div>
             <h3>SEO-Friendly Development</h3>
             <p>
-              Use clear page structure, descriptive headings,
-              relevant metadata and crawlable links to support SEO.
+              Use meaningful headings, descriptive metadata,
+              crawlable links and clean page structure to support SEO.
             </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <section class="section intro" id="benefits">
-      <div class="container intro-content">
-        <h2>Why Does Your Business Need a Professional Website?</h2>
-
-        <p>
-          A well-designed website gives potential customers a place to
-          understand your business, explore your services and contact you.
-          It also helps establish a consistent online brand presence.
-        </p>
-
-        <p>
-          At G7 Digital Marketing, our approach combines website usability,
-          responsive design and a clear content structure. We aim to make
-          important information easy to find and help visitors take the
-          next step.
-        </p>
-
-        <p>
-          Website design alone does not guarantee search rankings or sales.
-          Performance also depends on content quality, technical SEO,
-          competition and the overall customer experience.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="process">
+    <!-- Benefits -->
+    <section class="section" id="benefits">
       <div class="container">
+
         <div class="section-heading">
-          <h2>Our Website Development Process</h2>
+          <span class="section-label">Why Choose Good Web Design</span>
+          <h2>Benefits of a Professional Website</h2>
           <p>
-            A clear process helps turn your website requirements
-            into a structured online experience.
+            A well-planned website can help customers understand
+            your business and navigate your services with confidence.
           </p>
         </div>
 
-        <div class="process">
-          <article class="step">
-            <div class="step-number">01</div>
-            <h3>Planning</h3>
-            <p>Understand your goals, audience, content and website requirements.</p>
+        <div class="benefit-grid">
+
+          <article class="benefit">
+            <div class="icon-box">01</div>
+            <div>
+              <h3>Professional Brand Image</h3>
+              <p>
+                Present your business with consistent colors,
+                typography, messaging and visual design.
+              </p>
+            </div>
           </article>
 
-          <article class="step">
-            <div class="step-number">02</div>
-            <h3>Design</h3>
-            <p>Plan the layout, visual hierarchy and user experience.</p>
+          <article class="benefit">
+            <div class="icon-box">02</div>
+            <div>
+              <h3>Mobile-Friendly Experience</h3>
+              <p>
+                Help visitors read content, navigate pages and
+                access important information on smaller screens.
+              </p>
+            </div>
           </article>
 
-          <article class="step">
-            <div class="step-number">03</div>
-            <h3>Development</h3>
-            <p>Build the website with responsive layouts and organized code.</p>
+          <article class="benefit">
+            <div class="icon-box">03</div>
+            <div>
+              <h3>Clear Customer Journey</h3>
+              <p>
+                Guide visitors towards relevant services,
+                enquiry forms and contact information.
+              </p>
+            </div>
           </article>
 
-          <article class="step">
-            <div class="step-number">04</div>
-            <h3>Testing</h3>
-            <p>Check links, mobile display, page content and technical basics.</p>
+          <article class="benefit">
+            <div class="icon-box">04</div>
+            <div>
+              <h3>SEO-Ready Structure</h3>
+              <p>
+                Build a useful foundation for search visibility
+                with descriptive content and accessible links.
+              </p>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <section class="cta" id="contact">
+    <!-- Process -->
+    <section class="section section-light" id="process">
       <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">Our Workflow</span>
+          <h2>How We Build Your Website</h2>
+          <p>
+            A structured process keeps the project organized
+            from initial planning through launch.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card">
+            <span class="process-number">STEP 01</span>
+            <h3>Discovery &amp; Planning</h3>
+            <p>
+              Understand your business, target audience,
+              required pages and project goals.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">STEP 02</span>
+            <h3>Design &amp; Structure</h3>
+            <p>
+              Plan the page layouts, visual style,
+              navigation and content hierarchy.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">STEP 03</span>
+            <h3>Development &amp; Testing</h3>
+            <p>
+              Build the website and review links,
+              responsive layouts and essential functionality.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">STEP 04</span>
+            <h3>Launch &amp; Improvements</h3>
+            <p>
+              Publish the website after checks and
+              identify future improvements as needed.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">Frequently Asked Questions</span>
+          <h2>Web Design &amp; Development FAQs</h2>
+          <p>
+            Learn more about website planning, development
+            and the features your business may need.
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <article class="faq-item">
+            <h3>Why does my business need a website?</h3>
+            <p>
+              A website gives customers a place to learn about
+              your business, explore services and find contact details.
+              It can also support your digital marketing activities.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Will my website work on mobile devices?</h3>
+            <p>
+              Responsive design helps a website adapt to mobile,
+              tablet and desktop screens. The final result should
+              be tested on different screen sizes.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Can you redesign my existing website?</h3>
+            <p>
+              Yes. A redesign can improve the visual layout,
+              content organization, navigation and mobile usability
+              of an existing website.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Will my website be SEO-friendly?</h3>
+            <p>
+              A website can be built with SEO fundamentals such
+              as clear headings, descriptive titles, crawlable
+              links and a logical page structure. Rankings are not guaranteed.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>How long does website development take?</h3>
+            <p>
+              The timeline depends on the number of pages,
+              required features, content readiness and project scope.
+              A clear plan helps estimate the time needed.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Can I update website content later?</h3>
+            <p>
+              Yes. Content can be updated through the editing
+              method supported by your website platform. For a
+              coded website, changes may require editing HTML or CSS.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <span class="section-label">Let's Build Something Great</span>
         <h2>Ready to Build Your Business Website?</h2>
 
         <p>
-          Let's discuss a website that fits your business goals
-          and gives your customers a better online experience.
+          Share your website requirements and business goals.
+          Let's discuss a design and development approach that
+          suits your needs.
         </p>
 
-        <a class="btn" href="index.html#contact">Contact G7 Digital Marketing</a>
+        <div class="button-row contact-buttons">
+          <a class="btn btn-primary"
+             href="https://wa.me/message/YISI4KQVCBLKN1"
+             target="_blank"
+             rel="noopener noreferrer">
+            Contact Us on WhatsApp
+          </a>
+
+          <a class="btn btn-secondary" href="index.html#contact">
+            Visit Main Contact Page
+          </a>
+        </div>
+
       </div>
     </section>
 
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 G7 Digital Marketing. All rights reserved.</p>
+      <p>
+        © 2026 G7 Digital Marketing. All rights reserved.
+        <a href="index.html">Visit Homepage</a>
+      </p>
     </div>
   </footer>
 

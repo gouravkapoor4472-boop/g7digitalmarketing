@@ -220,7 +220,44 @@
   }
 }
 
+/* G7 Contact Form Mobile Fix */
+@media (max-width: 768px) {
 
+  #contact .wrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  #contactForm {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #contactForm > div {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    min-width: 0;
+  }
+
+  #contactForm input,
+  #contactForm select,
+  #contactForm textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #contact .section-head {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+  
 </style>
 </head>
 <body>
